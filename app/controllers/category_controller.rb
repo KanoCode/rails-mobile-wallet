@@ -1,4 +1,8 @@
 class CategoryController < ApplicationController
+
+  before_action :authenticate_user!
+ 
+
   def index
     @categories = Category.all
   end
@@ -14,7 +18,7 @@ class CategoryController < ApplicationController
 
   def create
     @category = Category.new(category_params)    
-    @category.user_id = 1
+    @category.user_id = current_user.id
     
     if @category.save
       redirect_to root_path
@@ -22,12 +26,6 @@ class CategoryController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
-  # def destroy
-  #   food = Food.find(params[:id])
-  #   food.destroy
-  #   redirect_to foods_path
-  # end
 
   private
 
