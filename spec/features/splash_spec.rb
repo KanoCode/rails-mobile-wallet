@@ -6,7 +6,7 @@ RSpec.feature 'Splash Screen', type: :feature do
   end
 
   scenario 'show Splash content' do
-    expect(page).to have_content('Expenses Tracker')
+    expect(page).to have_content('Expenses tracker')
   end
 
   scenario 'show Splash' do
