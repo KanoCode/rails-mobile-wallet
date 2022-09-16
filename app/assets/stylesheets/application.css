@@ -14,6 +14,12 @@
  *= require_self
  */
 
+ * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 nav,
 .category_nav {
   background: #5582bd;
@@ -48,9 +54,11 @@ a {
 .add-category {
   background-color: #60b625;
   width: 100%;
-/* position: absolute; */
 bottom: 0;
   border: none;
+  position: absolute;
+width: 100%;
+  bottom: 4px;
 }
 .add-category a {
   text-decoration: none;
@@ -67,3 +75,19 @@ bottom: 0;
 .addbtn{
   border: solid;
 }
+
+.splash-page{
+  height: 100vh;
+}
+
+.splash-actions{
+  position: absolute;
+width: 100%;
+  bottom: 4px;
+}
+
+.splash-text{
+  position: relative;
+  top:40%;
+}
+

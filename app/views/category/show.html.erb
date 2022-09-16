@@ -19,7 +19,7 @@
         <ul>
 
             <% @category.payments.each do |transaction|%>
-            <li> <%= transaction.name %>,  <%= transaction.amount %>      </li>
+            <li class="d-flex justify-content-between"> <p> <%= transaction.name %></p>  <p> <%= transaction.amount %> </p> <%= button_to 'delete',transaction_path(transaction.id), method: :delete,class:"btn btn-danger" %>     </li>
             <%end%>
         </ul>
     </li>

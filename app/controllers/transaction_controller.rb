@@ -24,11 +24,11 @@ class TransactionController < ApplicationController
     end
   end
 
-  # def destroy
-  #   food = Food.find(params[:id])
-  #   food.destroy
-  #   redirect_to foods_path
-  # end
+  def destroy
+    payment = Payment.find(params[:id])
+    payment.destroy
+    redirect_to root_path
+  end
 
   private
 
