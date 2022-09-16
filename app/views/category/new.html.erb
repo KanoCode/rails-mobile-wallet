@@ -1,0 +1,18 @@
+<h1>Add a new category</h1>
+
+
+<div class="container-fluid w-50 d-flex flex-column align-items-center">
+  <h1 class="mb-5">Add Transaction</h1>
+  <%= form_with model: @category, url: category_index_path, method: :post do |form| %>
+     <div>
+        <%= form.label :name, class: "form-label" %><br>
+        <%= form.text_field :name,  class:"form-control" %>
+     </div> 
+    <div>
+      <%= form.label :icon, class:"form-label" %><br>
+      <%= form.file_field :icon %>
+    </div>   
+    <%= form.submit 'Add Category', class: "btn btn-primary" %>
+  <% end %>
+</div>
+

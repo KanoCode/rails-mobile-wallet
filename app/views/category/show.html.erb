@@ -1,0 +1,12 @@
+<h1> Total expenses for this category is $ <%=@category.payments.sum(:amount) %></h1>
+
+
+<ul> 
+    <% @category.payments.each do |transaction|%>
+    <li> <%= transaction.name %>,  <%= transaction.amount %>    </li>
+    <%end%>
+
+</ul>
+
+
+<%= link_to "add a new transaction",new_transaction_path, class:"btn btn-secondary"%>
