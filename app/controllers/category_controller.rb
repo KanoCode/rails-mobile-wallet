@@ -1,25 +1,22 @@
 class CategoryController < ApplicationController
-
   before_action :authenticate_user!
- 
 
   def index
     @categories = Category.all
   end
 
   def show
-    @category  = Category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
-  def new 
-    @category  = Category.new
+  def new
+    @category = Category.new
   end
-
 
   def create
-    @category = Category.new(category_params)    
+    @category = Category.new(category_params)
     @category.user_id = current_user.id
-    
+
     if @category.save
       redirect_to root_path
     else
@@ -32,5 +29,4 @@ class CategoryController < ApplicationController
   def category_params
     params.require(:category).permit(:name, :icon)
   end
-
 end
