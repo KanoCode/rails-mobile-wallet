@@ -1,0 +1,35 @@
+  <div class="container-fluid category_nav p-3 justify-content-between d-flex">
+   
+  
+    <%= link_to 'back',root_path,class:"btn btn-light" %>
+  
+
+      <h2> Transactions </h2>
+
+</div>
+
+<div class="container-fluid">
+
+<ul class="my-4  list-group categories">
+    <div class="d-flex justify-content-between m-auto">
+    <%= image_tag(@category.icon, style:" width : 20%; text-decoration: none;") %>
+   <p class="mx-3 p-3 "><%=@category.name%> <p> <h4 class="mx-2 py-3"> $<%=@category.payments.sum(:amount) %></h4>
+   </div>
+<li class="list-group-item"> 
+        <ul>
+
+            <% @category.payments.each do |transaction|%>
+            <li class="d-flex justify-content-between"> <p> <%= transaction.name %></p>  <p> <%= transaction.amount %> </p> <%= button_to 'delete',transaction_path(transaction.id), method: :delete,class:"btn btn-danger" %>     </li>
+            <%end%>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+<button class="add-category p-3">
+<%= link_to "add a new transaction",new_transaction_path, class:"btn"%>
+</button>
+
+</div>
