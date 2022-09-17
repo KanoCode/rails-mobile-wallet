@@ -7,7 +7,7 @@ RSpec.describe 'Category page', type: :feature do
     visit new_user_session_path
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: '123456'
-    click_button 'Sign up'
+    click_button 'Log in'
   end
 
   it 'should be able to see categories' do
