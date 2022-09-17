@@ -12,10 +12,8 @@ _[Here](https://boiling-atoll-22258.herokuapp.com/) is the link to the live demo
 
 # Getting Started
 
-
-
-
-
+![boiling-atoll-22258 herokuapp com_(iPhone SE)](https://user-images.githubusercontent.com/95347844/190840614-dcb4eb2c-ef88-4eb4-83c1-6abcaa86a5ed.png)
+![boiling-atoll-22258 herokuapp com_(iPhone SE) (1)](https://user-images.githubusercontent.com/95347844/190840622-e4dceb0a-8119-462d-97cd-74e574ebe7bf.png)
 
 _To get a local copy up and running follow these simple steps._
 
