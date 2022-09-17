@@ -88,3 +88,9 @@ a {
   position: relative;
   top: 40%;
 }
+
+.title {
+  position: absolute;
+  right: 2%;
+  top: 0;
+}
